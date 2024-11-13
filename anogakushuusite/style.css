@@ -1,0 +1,632 @@
+@charset "UTF-8";
+/*
+Theme Name: あの学習サイト。
+Theme URI: https://www.sejuku.net/
+Description: SAMURAI ENGINEERのWordPress教材
+Version: 1.0.0
+Author: SAMURAI ENGINEER
+Author URI: https://www.sejuku.net/
+*/
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sp-menu, .about, .aside-menu {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #474747;
+  margin: 0;
+}
+
+.header-container {
+  padding: 0 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header-container {
+    max-width: 1280px;
+    padding: 0 20px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-logo img {
+  max-width: 150px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .site-logo {
+    margin-right: auto;
+  }
+  .site-logo img {
+    max-width: 190px;
+    width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.header-container label {
+  width: 50px;
+}
+@media (min-width: 768px) {
+  .header-container label {
+    display: none;
+  }
+}
+
+#nav {
+  position: absolute;
+  left: 0;
+  top: -1000px;
+  width: 100%;
+  z-index: 80;
+  background-color: #ffffff;
+  transition: all 0.21s;
+  z-index: 120;
+}
+@media (min-width: 768px) {
+  #nav {
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    height: 80px;
+  }
+}
+
+.sp-menu {
+  text-align: center;
+  margin: 65px auto 30px auto;
+}
+.sp-menu a, .sp-menu .ikon {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 5px;
+  padding: 10px 70px;
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .sp-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    height: 80px;
+  }
+  .sp-menu a, .sp-menu .ikon {
+    font-size: 22px;
+    border-radius: 14px;
+    padding: 0 10px;
+    margin-bottom: 0;
+  }
+}
+
+#menu:checked ~ #nav {
+  top: 0;
+}
+
+.bi-x-lg, .bi-list {
+  font-size: 48px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  .bi-x-lg, .bi-list {
+    display: none;
+  }
+}
+
+.bi-list {
+  color: #5100ff;
+  font-weight: bold;
+  position: absolute;
+  top: -1px;
+}
+
+.hero {
+  background: url(title22.png);
+  width: 100%;
+  background-position: 20% 90%;
+  height: 500px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .hero {
+    background: url(title22.png);
+    background-size: 130%;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+  }
+}
+
+.main-container {
+  padding: 0 21px;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .main-container {
+    max-width: 1160px;
+    width: 100%;
+    display: flex;
+  }
+}
+.main-container .aside-menu {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main-container .aside-menu {
+    display: block;
+    padding: 30px;
+  }
+}
+.main-container .aside-menu a {
+  color: antiquewhite;
+  font-size: 15px;
+}
+.main-container .right-wrap p {
+  font-size: 11px;
+  margin-bottom: 20px;
+}
+.main-container .right-wrap > :nth-child(6) {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .main-container .right-wrap {
+    margin-left: min(45px, 3%);
+  }
+}
+.main-container .about {
+  font-size: 18px;
+  display: inline-block;
+  background: linear-gradient(transparent 80%, rgb(255, 0, 0) 80%);
+}
+@media (min-width: 768px) {
+  .main-container .left-wrap {
+    border-radius: 7px;
+    width: 280px;
+    background-color: #ca9d4a;
+  }
+}
+
+footer {
+  margin-top: 50px;
+  height: 150px;
+  background-color: #000;
+}
+@media (min-width: 768px) {
+  footer {
+    height: 150px;
+  }
+}
+footer ul {
+  text-align: center;
+  line-height: 1;
+}
+footer ul li {
+  padding: 10px 0;
+}
+footer ul > li > a {
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  footer ul > li > a {
+    font-size: 10px;
+  }
+}
+footer footer::before {
+  content: "";
+  width: 100%;
+  height: 180px;
+  display: inline-block;
+  background: url(foot2.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  footer footer::before {
+    height: 210px;
+    z-index: 100;
+  }
+}
+
+.ikon:hover {
+  background-color: #213797;
+  color: #a9e8e3;
+}
+
+.sub1:hover {
+  background-color: #ff0048;
+  color: #9a009f;
+}
+
+.sub2:hover {
+  background-color: #5100ff;
+  color: #5dc628;
+}
+
+.sub5:hover {
+  background-color: #e2ff8b;
+  color: #b03500;
+}
+
+.sub4:hover {
+  background-color: #ff9900;
+  color: #a59228;
+}
+
+.sub3:hover {
+  background-color: #27c400;
+  color: #2c645f;
+}
+
+.sub6:hover {
+  background-color: #152d29;
+  color: #c6c6c6;
+}
+
+/**
+ * ***************************************
+ * ページ全体に関わるCSSをまず記述する
+ * ***************************************
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.sp-menu, .about, .aside-menu {
+  font-family: "Dela Gothic One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: #474747;
+  margin: 0;
+}
+
+.header-container {
+  padding: 0 10px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .header-container {
+    max-width: 1280px;
+    padding: 0 20px;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.site-logo img {
+  max-width: 150px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .site-logo {
+    margin-right: auto;
+  }
+  .site-logo img {
+    max-width: 190px;
+    width: 100%;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.header-container label {
+  width: 50px;
+}
+@media (min-width: 768px) {
+  .header-container label {
+    display: none;
+  }
+}
+
+#nav {
+  position: absolute;
+  left: 0;
+  top: -1000px;
+  width: 100%;
+  z-index: 80;
+  background-color: #ffffff;
+  transition: all 0.21s;
+  z-index: 120;
+}
+@media (min-width: 768px) {
+  #nav {
+    left: 0;
+    top: 0;
+    background-color: transparent;
+    height: 80px;
+  }
+}
+
+.sp-menu {
+  text-align: center;
+  margin: 65px auto 30px auto;
+}
+.sp-menu a, .sp-menu .ikon {
+  display: block;
+  font-size: 27px;
+  margin-bottom: 5px;
+  padding: 10px 70px;
+  border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .sp-menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    height: 80px;
+  }
+  .sp-menu a, .sp-menu .ikon {
+    font-size: 22px;
+    border-radius: 14px;
+    padding: 0 10px;
+    margin-bottom: 0;
+  }
+}
+
+#menu:checked ~ #nav {
+  top: 0;
+}
+
+.bi-x-lg, .bi-list {
+  font-size: 48px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  .bi-x-lg, .bi-list {
+    display: none;
+  }
+}
+
+.bi-list {
+  color: #5100ff;
+  font-weight: bold;
+  position: absolute;
+  top: -1px;
+}
+
+.hero {
+  background: url(title22.png);
+  width: 100%;
+  background-position: 20% 90%;
+  height: 500px;
+  margin-bottom: 50px;
+}
+@media (min-width: 768px) {
+  .hero {
+    background: url(title22.png);
+    background-size: 130%;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+  }
+}
+
+.hero {
+  background: url(title22.png);
+  width: 100%;
+  background-position: 20% 90%;
+  height: 500px;
+  margin-bottom: 80px;
+}
+@media (min-width: 768px) {
+  .hero {
+    background: url(title22.png);
+    background-size: 130%;
+    background-position: 50% 80%;
+    background-repeat: no-repeat;
+  }
+}
+
+.menu-container {
+  margin: 0 auto;
+  padding: 21px;
+}
+@media (min-width: 768px) {
+  .menu-container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.menu-list {
+  margin: 0 auto;
+}
+.menu-list li > a {
+  font-size: clamp(0.5rem, 0.364rem + 0.68vw, 0.875rem);
+  overflow-wrap: anywhere;
+}
+@media (min-width: 768px) {
+  .menu-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.grade {
+  margin: 0 auto;
+  border-radius: 7px;
+  width: 100%;
+  margin-bottom: 35px;
+  background-color: #ffffff;
+  box-shadow: 1px 4px 10px #bababa;
+}
+@media (min-width: 768px) {
+  .grade {
+    display: grid;
+    grid-template: auto/repeat(3, 1fr);
+    max-height: 450px;
+    min-width: 450px;
+    max-width: 250px;
+    width: 100%;
+    padding: 21px 15px 21px;
+  }
+}
+
+.grade > :first-child {
+  display: inline-block;
+  width: 100%;
+  font-size: 6vw;
+  color: #c5c5c5;
+}
+
+footer {
+  margin-top: 30px;
+  height: 150px;
+  background-color: #000;
+}
+@media (min-width: 768px) {
+  footer {
+    height: 150px;
+  }
+}
+footer ul {
+  text-align: center;
+  line-height: 1;
+}
+footer ul li {
+  padding: 10px 0;
+}
+footer ul > li > a {
+  color: #fff;
+  font-size: 10px;
+  line-height: 1;
+}
+@media (min-width: 768px) {
+  footer ul > li > a {
+    font-size: 10px;
+  }
+}
+footer footer::before {
+  content: "";
+  width: 100%;
+  height: 180px;
+  display: inline-block;
+  background: url(foot2.png);
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  z-index: 100;
+}
+@media (min-width: 768px) {
+  footer footer::before {
+    height: 210px;
+    z-index: 100;
+  }
+}
+
+.ikon:hover {
+  background-color: #213797;
+  color: #a9e8e3;
+}
+
+.sub1:hover {
+  background-color: #ff0048;
+  color: #9a009f;
+}
+
+.sub2:hover {
+  background-color: #5100ff;
+  color: #5dc628;
+}
+
+.sub5:hover {
+  background-color: #e2ff8b;
+  color: #b03500;
+}
+
+.sub4:hover {
+  background-color: #ff9900;
+  color: #a59228;
+}
+
+.sub3:hover {
+  background-color: #27c400;
+  color: #2c645f;
+}
+
+.sub6:hover {
+  background-color: #152d29;
+  color: #c6c6c6;
+}
+
+.main3 {
+  padding: 0 5%;
+}
+
+.main3-container {
+  padding: 10px 30px;
+  background-color: antiquewhite;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=style.css.map */
